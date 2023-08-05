@@ -16,15 +16,16 @@ import com.babicmila.entity.Student;
 import com.babicmila.service.StudentService;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 import java.util.Set;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/student")
 public class StudentController {
 
-    @Autowired
     StudentService studentService;
 
     @PostMapping

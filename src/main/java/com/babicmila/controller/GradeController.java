@@ -18,12 +18,13 @@ import com.babicmila.entity.Grade;
 import com.babicmila.service.GradeService;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/grade")
 public class GradeController {
 
-    @Autowired
     GradeService gradeService;
 
     @GetMapping("/student/{studentId}/course/{courseId}")
