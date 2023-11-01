@@ -10,6 +10,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.babicmila.security.filter.AuthenticationFilter;
 import com.babicmila.security.filter.ExceptionHandlerFilter;
+import com.babicmila.security.filter.JWTAuthorizationFilter;
+import com.babicmila.security.manager.CustomAuthenticationManager;
 
 import lombok.AllArgsConstructor;
 
@@ -17,10 +19,12 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SecurityConfig {
 
+        CustomAuthenticationManager customAuthenticationManager;
+
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-                AuthenticationFilter authenticationFilter = new AuthenticationFilter();
+                AuthenticationFilter authenticationFilter = new AuthenticationFilter(customAuthenticationManager);
                 authenticationFilter.setFilterProcessesUrl("/authenticate");
 
                 http
@@ -33,6 +37,7 @@ public class SecurityConfig {
                                                 .anyRequest().authenticated())
                                 .addFilterBefore(new ExceptionHandlerFilter(), AuthenticationFilter.class)
                                 .addFilter(authenticationFilter)
+                                .addFilterAfter(new JWTAuthorizationFilter(), AuthenticationFilter.class)
                                 .sessionManagement(sessionman -> sessionman
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
                 return http.build();
