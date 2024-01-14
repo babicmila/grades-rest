@@ -1,6 +1,6 @@
 REST API for Grades Management System
 
-- Implemented HTTP Methods with URL endpoints supporting HTTP requests for CRUD operations for grades, students, courses, etc.  Additionally, endpoints are available for retrieving the entire list of these entities. Each HTTP request triggers an accurate HTTP response code
+- Implemented HTTP Methods with URL endpoints supporting CRUD operations with grades, students, courses, etc. Additionally, endpoints are available for retrieving the entire entity lists. Each HTTP request triggers an accurate HTTP response code.
 
 - Designed Exception handling for specific Exception types, contributing to an 80% decrease in generic error messages and providing more informative responses.
 
