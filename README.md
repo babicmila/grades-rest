@@ -8,6 +8,9 @@ REST API for Grades Management System
 
 - Integrated a MySQL Database for data management using Docker Compose, for enhancement of scalability, providing portable environment, and simplifying collaboration.
 
+- Tested CRUD API endpoints with Postman
+
+
 Postman HTTP Requests:
 
 ![HTTP Requests](https://github.com/babicmila/grades-rest/assets/57596723/290dcc81-492a-45bb-852c-8d5cd0933b24)
