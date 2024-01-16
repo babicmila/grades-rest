@@ -37,7 +37,7 @@ The Grades Management System REST API is used for managing course grades in an e
    ```bash
    java -jar target/grades-rest-<version>.jar
 
-The API will be accessible at http://localhost:8080 by default. For testing endpoints I used Postman.
+The API will be accessible at http://localhost:8080 by default. For testing endpoints use Postman.
 
 ## API Documentation
 
