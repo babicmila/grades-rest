@@ -101,6 +101,3 @@ The API will be accessible at http://localhost:8080 by default. For testing endp
    DELETE localhost:8080/grade/student/4/course/1
    ```
 
-## Database Design:
-
-![Database design](https://github.com/babicmila/grades-rest/assets/57596723/78bc44a3-4887-46f1-98f3-7f51496abedd)
