@@ -31,6 +31,7 @@ The Grades Management System REST API is used for managing course grades in an e
 2. Install dependencies:
 
    ```bash
+   mvn clean install
    docker compose build
 
 3. Run the application
