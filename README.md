@@ -31,10 +31,11 @@ The Grades Management System REST API is used for managing course grades in an e
 2. Install dependencies:
 
    ```bash
-   mvn clean install
+   docker compose build
 
 3. Run the application
    ```bash
+   docker compose run
    mvn spring-boot:run
 
 The API will be accessible at http://localhost:8080 by default. For testing endpoints use Postman.
