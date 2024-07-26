@@ -6,7 +6,7 @@
 
 The Grades Management System REST API is used for managing course grades in an educational setting. This API allows users to perform CRUD (Create, Read, Update, Delete) operations on students, grades, courses, and related data. Each HTTP request triggers an accurate HTTP response code.
   
-- Utilized JSON Web Token (JWT) as a primary security component, ensuring secure access to endpoints by validating and authorizing incoming requests. Applying an HMAC512 hash algorithm with a secret key to ensure a 98% integrity guarantee and authenticity of the token.
+- Utilized JSON Web Token (JWT) as a primary security component, ensuring secure access to endpoints by validating and authorizing incoming requests. Applying an HMAC-SHA512 hash algorithm with a secret key to ensure 99% integrity and authenticity of the token.
 
 - Designed Exception handling for specific Exception types, contributing to an 80% decrease in generic error messages and providing more informative responses.
 
@@ -32,13 +32,14 @@ The Grades Management System REST API is used for managing course grades in an e
 
    ```bash
    mvn clean install
+   docker compose build
 
 3. Run the application
    ```bash
-   java -jar target/grades-rest-<version>.jar
+   docker compose run
+   mvn spring-boot:run
 
-The API will be accessible at http://localhost:8080 by default.
-
+The API will be accessible at http://localhost:8080 by default. For testing endpoints use Postman.
 
 ## API Documentation
 
@@ -102,6 +103,3 @@ The API will be accessible at http://localhost:8080 by default.
    DELETE localhost:8080/grade/student/4/course/1
    ```
 
-## Database Design:
-
-![Database design](https://github.com/babicmila/grades-rest/assets/57596723/78bc44a3-4887-46f1-98f3-7f51496abedd)
